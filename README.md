@@ -1,5 +1,5 @@
 
-# Muti Page Application Vs Single Page Application
+## Muti Page Application Vs Single Page Application
 
 In a traditional Web app (MPA), every time the app calls the server, the server renders a new HTML page. This triggers a page refresh in the browser everytime.
 
