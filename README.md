@@ -7,8 +7,8 @@ whereas, In an SPA, after the first page loads, all interaction with the server 
 
 The below figures represents the two approaches.
 
-
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
 
 #
 
@@ -57,6 +57,7 @@ This is what our project tree looks like:
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
+
 Let's have a look at some of the files and folders:
 
 #### 1. /e2e/
@@ -70,17 +71,21 @@ All 3rd party libraries are installed into this folder when you run npm install.
 This is where your all of the application source code goes. 
 
 - **/app/**
+
 When you scaffold an angular application your first component is generated here.
 
 - **/environments/**
+
 This folder contains two files, each for different environments. You will use this file to store environment specific configuration like database credentials or server addresses. By default there are two files, one for production and on for development.
 
 - **index.html**
+
 The index.html file is the file used by the angular compiler to render our application inside the browser.
 
-This file loads the root component of the application (AppComponent) by using the selector  (<app-root>):
+This file loads the root component of the application (AppComponent) by using the selector  < app-root >:
 
 - **main.ts**
+
 This is the starting point for our app.
 
 #### 4. .gitignore
@@ -94,3 +99,26 @@ A bunch of compiler settings. Based on these settings, it will compile code to J
 
 #### 7. tslint.json
 TSlint is a useful static analysis tool that checks our TypeScript code for readability, maintainability, and functionality errors. This file contains its configuration. We will see how it works in a future lesson.
+
+#
+## How Angular Application is Structured
+
+The Angular application is structured in components and modules.Every Angular application has at least one Module (NgModule class), the root module, which is conventionally named AppModule and resides in a file named app.module.ts . You launch your application by bootstrapping the root NgModule
+
+- **Module**
+
+Modules can be described as self-contained chunks of the functionality in your application which can run independently. In Angular, Modules are the collection of the Components, Service directives, and Pipes which are related such that they can be combined to form a module
+
+- **Component**
+
+The most important feature of any Angular application is the component which controls the View or the template that we use. Generally, we write all the application logic for the View that is mapped to this component.
+
+### Module vs Components
+
+The module can be considered as a collection of components, directives, services, pipes, helpers, etc.
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+Each component can use other components, which are declared in the same module. To use components declared in other modules, they need to be exported from that module and the module needs to be imported into our module where we need that functionality.
+
+One of many modules combines up to make an Application.
