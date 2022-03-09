@@ -121,3 +121,26 @@ Each component can use other components, which are declared in the same module. 
 ![Module vs Component](https://github.com/PatternsTechGit/PT_AngularCLI/blob/main/images/module_vs_component.png)
 
 One of many modules combines up to make an Application.
+
+## APP MODULE: THE ROOT MODULE
+Defines `AppModule`, the [root module](https://angular.io/guide/bootstrapping) that tells Angular how to assemble the application. By default it declares only the `AppComponent`. Soon there will be more components to declare as your application grows.
+
+![App.module.ts](https://github.com/PatternsTechGit/PT_AngularCLI/blob/main/images/app_module_ts.png)
+
+To use any method define in another classes, we need to import it first. So `import { }` statement helps us to do it.
+
+After the `import` statements, you come to a class adorned with the `@NgModule` [*decorator*.](https://ultimatecourses.com/blog/angular-decorators)
+
+The `@NgModule` decorator identifies `AppModule` as an Angular module class (also called an `NgModule` class). `@NgModule` takes a metadata object that tells Angular how to compile and launch the application.
+
+### The *declarations* array
+Declarations are used to declare components, directives, pipes that belongs to the current module. Everything inside declarations knows each other.
+
+### The *imports* array
+Imports makes the exported declarations of other modules available in the current module. It is used to import supporting modules likes FormsModule, RouterModule, CommonModule etc.
+
+### The *providers* array
+Providers are used to make services and values known to dependency injection. They are added to the root scope and they are injected to other services or directives that have them as dependency.
+
+### The *bootstrap* array
+The application launches by bootstrapping the root `AppModule`, which is also referred to as an `entryComponent`. Among other things, the bootstrapping process creates the component(s) listed in the `bootstrap` array and inserts each one into the browser DOM.
