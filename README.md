@@ -7,7 +7,7 @@ whereas, In an SPA, after the first page loads, all interaction with the server 
 
 The below figures represents the two approaches.
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![SPA vs MPA](https://github.com/PatternsTechGit/PT_AngularCLI/blob/main/images/spa_arch.png)
 
 
 #
@@ -81,8 +81,7 @@ This folder contains two files, each for different environments. You will use th
 - **index.html**
 
 The index.html file is the file used by the angular compiler to render our application inside the browser.
-
-This file loads the root component of the application (AppComponent) by using the selector  < app-root >:
+This file loads the root component of the application (AppComponent) by using the selector  < app-root >
 
 - **main.ts**
 
@@ -117,8 +116,8 @@ The most important feature of any Angular application is the component which con
 
 The module can be considered as a collection of components, directives, services, pipes, helpers, etc.
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
 Each component can use other components, which are declared in the same module. To use components declared in other modules, they need to be exported from that module and the module needs to be imported into our module where we need that functionality.
+
+![Module vs Component](https://github.com/PatternsTechGit/PT_AngularCLI/blob/main/images/module_vs_component.png)
 
 One of many modules combines up to make an Application.
