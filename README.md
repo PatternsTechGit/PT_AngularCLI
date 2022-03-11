@@ -34,7 +34,7 @@ Use the following commands to go into the parent directory of your newly created
 
 ```Generating new Angular Application
   cd BBBankUI
-  ng serve
+  npm start
 ```
 In your browser, open http://localhost:4200/ to see the new application run.
 
