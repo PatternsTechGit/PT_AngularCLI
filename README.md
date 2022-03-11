@@ -1,5 +1,5 @@
 # Scaffolding Single Page Application using Angular CLI
-#
+
 ## Muti Page Application (MPA) Vs Single Page Application (SPA)
 
 In a traditional Web app (MPA), every time the app calls the server, the server renders a new HTML page. This triggers a page refresh in the browser everytime.
