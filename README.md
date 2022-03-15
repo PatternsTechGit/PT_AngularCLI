@@ -153,4 +153,4 @@ Main.ts file calls the function `bootstrapModule(AppModule)` which tells the bui
 ![main_ts.png file](https://github.com/PatternsTechGit/PT_AngularCLI/blob/main/images/main_ts.png)
 
 From the `main.ts` file, it is very clear that we are bootstrapping the app with `AppModule.`
-AppModule is imported from the app of the main parent module, and the same is given to the bootstrap Module, which makes the appmodule load.
+AppModule is imported from the app of the main parent module, and the same is given to the bootstrap Module, which makes the `appmodule` load.
