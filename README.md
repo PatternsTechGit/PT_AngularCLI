@@ -144,3 +144,16 @@ Providers are used to make services and values known to dependency injection. Th
 
 ### The *bootstrap* array
 The application launches by bootstrapping the root `AppModule`, which is also referred to as an `entryComponent`. Among other things, the bootstrapping process creates the component(s) listed in the `bootstrap` array and inserts each one into the browser DOM.
+
+## MAIN.TS: THE ENTRY POINT
+
+This file acts as the entry point of the application. This entry point is defined in the internals of webpack that is used by Angular to support the modular functionality. 
+Main.ts file calls the function `bootstrapModule(AppModule)` which tells the builder to bootstrap the app
+
+![main_ts.png file](https://github.com/PatternsTechGit/PT_AngularCLI/blob/main/images/main_ts.png)
+
+From the `main.ts` file, it is very clear that we are bootstrapping the app with `AppModule.` This `AppModule` is defined in `APP.MODULE.TS` file which is found in
+
+```
+<project_directory>/src/app/app.module.ts
+```
