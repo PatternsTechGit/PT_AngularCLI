@@ -1,5 +1,6 @@
+# Scaffolding Single Page Application using Angular CLI
 
-# Muti Page Application Vs Single Page Application
+## Muti Page Application (MPA) Vs Single Page Application (SPA)
 
 In a traditional Web app (MPA), every time the app calls the server, the server renders a new HTML page. This triggers a page refresh in the browser everytime.
 
@@ -8,7 +9,6 @@ whereas, In an SPA, after the first page loads, all interaction with the server 
 The below figures represents the two approaches.
 
 ![SPA vs MPA](https://github.com/PatternsTechGit/PT_AngularCLI/blob/main/images/spa_arch.png)
-
 
 #
 
@@ -34,7 +34,7 @@ Use the following commands to go into the parent directory of your newly created
 
 ```Generating new Angular Application
   cd BBBankUI
-  ng serve
+  npm start
 ```
 In your browser, open http://localhost:4200/ to see the new application run.
 
@@ -104,11 +104,11 @@ TSlint is a useful static analysis tool that checks our TypeScript code for read
 
 The Angular application is structured in components and modules.Every Angular application has at least one Module (NgModule class), the root module, which is conventionally named AppModule and resides in a file named app.module.ts . You launch your application by bootstrapping the root NgModule
 
-- **Module**
+- [**Module**](https://angular.io/guide/architecture-modules)
 
 Modules can be described as self-contained chunks of the functionality in your application which can run independently. In Angular, Modules are the collection of the Components, Service directives, and Pipes which are related such that they can be combined to form a module
 
-- **Component**
+- [**Component**](https://angular.io/api/core/Component)
 
 The most important feature of any Angular application is the component which controls the View or the template that we use. Generally, we write all the application logic for the View that is mapped to this component.
 
@@ -144,6 +144,7 @@ Providers are used to make services and values known to dependency injection. Th
 
 ### The *bootstrap* array
 The application launches by bootstrapping the root `AppModule`, which is also referred to as an `entryComponent`. Among other things, the bootstrapping process creates the component(s) listed in the `bootstrap` array and inserts each one into the browser DOM.
+<<<<<<< HEAD
 
 ## MAIN.TS: THE ENTRY POINT
 
@@ -157,3 +158,5 @@ From the `main.ts` file, it is very clear that we are bootstrapping the app with
 ```
 <project_directory>/src/app/app.module.ts
 ```
+=======
+>>>>>>> e53a43f4aefcbf66bb7a8a856a2675c54eec6bc1
