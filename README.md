@@ -121,7 +121,7 @@ Each component can use other components, which are declared in the same module. 
 
 One of many modules combines up to make an Application.
 
-#### Step 6:  APP MODULE: THE ROOT MODULE
+#### Step 6:  APP MODULE: The Root Module
 Defines `AppModule`, the [root module](https://angular.io/guide/bootstrapping) that tells Angular how to assemble the application. By default it declares only the `AppComponent`. Soon there will be more components to declare as your application grows.
 
 ![App.module.ts](https://github.com/PatternsTechGit/PT_AngularCLI/blob/main/images/app_module_ts.png)
