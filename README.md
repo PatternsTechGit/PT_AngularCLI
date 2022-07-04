@@ -2,68 +2,80 @@
 
 ## Muti Page Application (MPA) Vs Single Page Application (SPA)
 
-In a traditional Web app (MPA), every time the app calls the server, the server renders a new HTML page. This triggers a page refresh in the browser everytime.
+In a traditional Web App **(MPA)**, every time the app calls the server, the server renders a new *HTML* page. This triggers a page refresh in the browser every time.
 
-whereas, In an SPA, after the first page loads, all interaction with the server happens through AJAX calls. These AJAX calls return data usually in JSON format. The app uses the JSON data to update the page dynamically, without reloading the full page.
+Whereas, In an **SPA**, after the first page loads, all interaction with the server happens through `AJAX` calls. These AJAX calls return data usually in `JSON` format. The app uses the JSON data to update the page dynamically, without reloading the full page.
 
 The below figures represents the two approaches.
 
 ![SPA vs MPA](https://github.com/PatternsTechGit/PT_AngularCLI/blob/main/images/spa_arch.png)
 
-### Angular CLI
-Angular Command-Line Interface (CLI) is a tool to initialize, develop, scaffold, and maintain Angular applications directly from a command shell.
+### What is Angular CLI?
+Angular Command-Line Interface (CLI) is a tool to *initialize, develop, scaffold, and maintain* Angular applications directly from a **command shell**.
+---------- 
 
 ### About this exercise
 In this lab we will
-- Install Angular CLI
-- Scaffold a new Angular Application
-- See what does `ng Generate` command do?
+- **Install** Angular CLI
+- **Scaffold** a new Angular Application
+- See what does `ng generate` command do
 - See how an Angular project structure looks like
-- The Root module of Angular App
-- Entry point of a new Angular App
+- Look into **Root module** of Angular App
+- Look into **Entry point** of a new Angular App
 
 ------------
 
 #### Step 1:  Installing Angular CLI
 
-- Install the [npm package manager](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) :
-- Then enter the following command into command prompt.
-```Installing Angular CLI
+- Install the [npm package manager](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) 
+- Use the following command into command prompt/terminal to install Angular CLI
+```powershell
   npm install -g @angular/cli
 ```
 
 #### Step 2:   Scaffolding Angular Application
-To create a new project run the following command on command prompt:
+To create a new project run the following command. It will create the project by the name of *BBBankUI*
 
 ```Typescript
 ng new BBBankUI
 ```
-Use the following commands to go into the parent directory of your newly created project "BBBankUI" and run the application
+At this point it may ask you about the *Privacy consent, Routing module and Styling CSS* file. You can select **Yes** or **No** according to your need. At the moment we will select *yes*.
 
-```Typescript
+
+Now use the following commands to go into the **parent directory** of your newly created project *"BBBankUI"* and run the application
+
+```powershell
   cd BBBankUI
-  npm start
+```
+
+Now to give a first rest run of your newly created Angular Application use this command
+
+```powershell
+npm start
 ```
 In your browser, open http://localhost:4200/ to see the new application run.
+
+Your first sample app will look like this
+![](/images/1.jpg)
 
 
 #### Step 3:  Some useful Angular CLI Commands
 One of the most important and used angular CLI command is ng [generate](https://angular.io/cli/generate), It has multiple arguments.
 
-One of argument of generate command for a new component is following:
+One of argument of **generate** command for a new **component** is following:
 
 ```
     ng g c first-component
 ```
 
-Here, g is shorthand property for generate and c is for component.
+Here, g is shorthand property for `generate` and c is for `component`. It will create a new component for you about which we will discuss in later labs.
 
 Learn more about [Angular CLI commands](https://angular.io/cli)
 
 #### Step 4:  Angular Project Structure
 This is what our project tree looks like:
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![](/images/2.png)
 
 Let's have a look at some of the files and folders:
 
@@ -101,10 +113,10 @@ A bunch of compiler settings. Based on these settings, it will compile code to J
 7. #### tslint.json
 TSlint is a useful static analysis tool that checks our TypeScript code for readability, maintainability, and functionality errors. This file contains its configuration. We will see how it works in a future lesson.
 
-#
+-------
 #### Step 5:  How Angular Application is Structured
 
-The Angular application is structured in components and modules.Every Angular application has at least one Module (NgModule class), the root module, which is conventionally named AppModule and resides in a file named app.module.ts . You launch your application by bootstrapping the root NgModule
+The Angular application is structured in **components** and **modules**. Every Angular application has at least one Module (NgModule class), the **root module**, which is conventionally named *AppModule* and resides in a file named `app.module.ts`. You launch your application by **bootstrapping** the root NgModule
 
 - [**Module**](https://angular.io/guide/architecture-modules)
 Modules can be described as self-contained chunks of the functionality in your application which can run independently. In Angular, Modules are the collection of the Components, Service directives, and Pipes which are related such that they can be combined to form a module
@@ -147,9 +159,11 @@ The application launches by bootstrapping the root `AppModule`, which is also re
 #### Step 7:  MAIN.TS: The Entry Point
 
 This file acts as the entry point of the application. This entry point is defined in the internals of webpack that is used by Angular to support the modular functionality. 
-Main.ts file calls the function `bootstrapModule(AppModule)` which tells the builder to bootstrap the app
+
+**main.ts** file calls the function `bootstrapModule(AppModule)` which tells the builder to bootstrap the app
 
 ![main_ts.png file](https://github.com/PatternsTechGit/PT_AngularCLI/blob/main/images/main_ts.png)
 
 From the `main.ts` file, it is very clear that we are bootstrapping the app with `AppModule.`
+
 AppModule is imported from the app of the main parent module, and the same is given to the bootstrap Module, which makes the `appmodule` load.
